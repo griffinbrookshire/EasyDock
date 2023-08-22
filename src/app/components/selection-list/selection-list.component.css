@@ -1,0 +1,5 @@
+#selection-list-container {
+    border: 1px solid black;
+    border-radius: 10%;
+    padding: 20px;
+}
