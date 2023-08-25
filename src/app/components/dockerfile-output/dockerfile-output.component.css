@@ -1,0 +1,8 @@
+.dockerfile-output-container {
+    align-items: center;
+}
+
+.dockerfile-output-textbox {
+    margin-bottom: 20px;
+    font-size: 16px;
+}

@@ -7,4 +7,12 @@ import { Component } from '@angular/core';
 })
 export class DockerPage {
 
+  dockerfileText: string = '';
+
+  updateDockerfile($event: string) {
+    this.dockerfileText = $event;
+  }
+
+  language: string = 'FROM openjdk:17'
+
 }

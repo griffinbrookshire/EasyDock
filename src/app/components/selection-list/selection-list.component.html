@@ -1,7 +1,6 @@
-<div id="selection-list-container">
-    <h3>{{ selectionData.title }}</h3>
-    <select>
-        <option></option>
-        <option *ngFor="let selection of selectionData.selections">{{selection}}</option>
+<div class="selection-list-container flex flex-column h-100">
+    <h3 class="selection-list-title">{{ selectionData.title }}</h3>
+    <select multiple (change)="valueSelected($event.target)">
+        <option *ngFor="let selection of selectionData.selections" [value]="selection.dockerfileText">{{selection.name}}</option>
     </select>
 </div>

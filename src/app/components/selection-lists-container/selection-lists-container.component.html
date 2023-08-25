@@ -1,3 +1,3 @@
-<div id="selection-lists-container">
-    <selection-list *ngFor="let selectionList of selectionLists" [selectionData]="selectionList"></selection-list>
+<div class="selection-lists-container flex h-100">
+    <selection-list *ngFor="let selectionList of selectionLists" [selectionData]="selectionList" (selected)="updateDockerfile($event)"></selection-list>
 </div>

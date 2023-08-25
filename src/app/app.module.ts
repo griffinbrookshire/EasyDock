@@ -9,6 +9,7 @@ import { DockerPage } from './pages/docker-page/docker-page.component';
 import { HomePage } from './pages/home-page/home-page.component';
 import { SelectionList } from './components/selection-list/selection-list.component';
 import { AccountPage } from './pages/account-page/account-page.component';
+import { DockerfileOutput } from './components/dockerfile-output/dockerfile-output.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { AccountPage } from './pages/account-page/account-page.component';
     DockerPage,
     HomePage,
     SelectionList,
-    AccountPage
+    AccountPage,
+    DockerfileOutput
   ],
   imports: [
     BrowserModule,

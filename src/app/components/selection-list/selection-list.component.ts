@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'selection-list',
@@ -8,5 +8,10 @@ import { Component, Input } from '@angular/core';
 export class SelectionList {
 
   @Input() selectionData: any;
+  @Output() selected = new EventEmitter<string>();
+
+  valueSelected(selectedOption: any) {
+    this.selected.emit(selectedOption.value);
+  }
 
 }

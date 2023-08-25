@@ -1,1 +1,29 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body {
+    margin: 0;
+    height: 100%;
+    background-image: linear-gradient(to top, #19323c, #104a62, #02618d, #1978b9, #458ee6);
+    color: white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+.h-100 {
+    height: 100%;
+}
+
+h3 {
+    margin: 20px 0;
+}

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'selection-lists-container',
@@ -7,37 +7,74 @@ import { Component } from '@angular/core';
 })
 export class SelectionListsContainer {
 
-selectionLists: any = [
-  {
-    "title": "Languages",
-    "selections": [
-      "Java",
-      "Python",
-      "JavaScript"
-    ]
-  },
-  {
-    "title": "Frameworks",
-    "selections": [
-      "Angular",
-      "React"
-    ]
-  },
-  {
-    "title": "Build Tools",
-    "selections": [
-      "Maven",
-      "Grade",
-      "npm"
-    ]
-  },
-  {
-    "title": "Jenkins",
-    "selections": [
-      "Server",
-      "Agent"
-    ]
-  },
-];
+  @Output() updateDockerfileEvent = new EventEmitter<string>();
+
+  updateDockerfile($event: string) {
+    console.log($event)
+    this.updateDockerfileEvent.emit($event);
+  }
+
+  selectionLists: any = [
+    {
+      "title": "Languages",
+      "selections": [
+        {
+          "name": "Java",
+          "dockerfileText": "openjdk:17"
+        },
+        {
+          "name": "Python",
+          "dockerfileText": "python:3"
+        },
+        {
+          "name": "JavaScript",
+          "dockerfileText": "node:16"
+        },
+      ]
+    },
+    {
+      "title": "Frameworks",
+      "selections": [
+        {
+          "name": "Angular",
+          "dockerfileText": "node"
+        },
+        {
+          "name": "React",
+          "dockerfileText": "node"
+        },
+      ]
+    },
+    {
+      "title": "Build Tools",
+      "selections": [
+        {
+          "name": "Maven",
+          "dockerfileText": "node"
+        },
+        {
+          "name": "Gradle",
+          "dockerfileText": "node"
+        },
+        {
+          "name": "npm",
+          "dockerfileText": "node"
+        },
+      ]
+    },
+    {
+      "title": "Jenkins",
+      "selections": [
+        {
+          "name": "Server",
+          "dockerfileText": "node"
+        },
+        {
+          "name": "Agent",
+          "dockerfileText": "node"
+        },
+      ]
+    },
+  ];
 
 }
