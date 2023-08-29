@@ -10,6 +10,7 @@ import { HomePage } from './pages/home-page/home-page.component';
 import { SelectionList } from './components/selection-list/selection-list.component';
 import { AccountPage } from './pages/account-page/account-page.component';
 import { DockerfileOutput } from './components/dockerfile-output/dockerfile-output.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { DockerfileOutput } from './components/dockerfile-output/dockerfile-outp
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

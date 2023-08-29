@@ -1,6 +1,6 @@
 <h1>Dockerfile Generator</h1>
 <div class="content-container flex">
     <selection-lists-container (updateDockerfileEvent)="updateDockerfile($event)"></selection-lists-container>
-    <dockerfile-output class="w-100" [language]="dockerfileText"></dockerfile-output>
+    <dockerfile-output class="w-100" [os]="os" [language]="language" [framework]="framework" [buildtools]="buildtools" [jenkins]="jenkins" [cloud]="cloud"></dockerfile-output>
 </div>
 

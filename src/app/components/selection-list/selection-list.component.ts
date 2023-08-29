@@ -11,7 +11,7 @@ export class SelectionList {
   @Output() selected = new EventEmitter<string>();
 
   valueSelected(selectedOption: any) {
-    this.selected.emit(selectedOption.value);
+    this.selected.emit(this.selectionData.propertyName + ':' + selectedOption.value);
   }
 
 }
