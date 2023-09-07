@@ -72,4 +72,15 @@ export class DockerfileOutput implements OnChanges {
     navigator.clipboard.writeText(this.dockerfileText);
   }
 
+  resetDockerfile() {
+    this.dockerfileText = '\n\n';
+    this.os = '';
+    this.language = '';
+    this.framework = '';
+    this.buildtools = '';
+    this.jenkins = '';
+    this.cloud = '';
+    this.setHeight();
+  }
+
 }

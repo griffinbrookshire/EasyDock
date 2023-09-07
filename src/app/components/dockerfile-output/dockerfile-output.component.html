@@ -1,13 +1,15 @@
 <div class="dockerfile-section-container flex flex-column">
     <div class="dockerfile-title-container flex">
         <div class="flex left">
-            <img src="/assets/download.png" class="utility-img" (click)="clientDownload()">
-            <img src="/assets/clipboard.png" class="utility-img" (click)="copyToClipboard()"> 
+            <img src="/assets/download-icon.png" class="utility-img" (click)="clientDownload()">
+            <img src="/assets/clipboard-icon.png" class="utility-img" (click)="copyToClipboard()"> 
         </div>
         <div class="flex center">
             <h2>Dockerfile</h2>
         </div>
-        <div class="flex right"></div>
+        <div class="flex right">
+            <img src="/assets/trash-can-icon.png" class="utility-img" (click)="resetDockerfile()"> 
+        </div>
     </div>
     <textarea class="dockerfile-output-textbox" [(ngModel)]="dockerfileText" [ngStyle]="{'height': inputHeight.toString()+'px'}" (input)="setHeight()" cols="50"></textarea>
 </div>
